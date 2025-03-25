@@ -8,12 +8,23 @@ const Item = ({ item, cart, increaseQuantity, decreaseQuantity }) => {
     <article>
       <div>
         <div className='item-image' data-state={isOutline}>
-          <img
-            width={508}
-            height={480}
-            src={item.image.desktop}
-            alt='Waffle with Berries'
-          />
+          <picture>
+            <source
+              srcSet={`${item.image.desktop} 502w`}
+              media='(min-width: 1440px)'
+            />
+            <source
+              srcSet={`${item.image.tablet} 427w`}
+              media='(min-width: 640px)'
+            />
+            <img
+              src={item.image.mobile}
+              srcSet={`${item.image.mobile} 654w`}
+              alt=''
+              width={654}
+              height={424}
+            />
+          </picture>
         </div>
         <div style={{ minHeight: '46px', transform: 'translateY(-50%)' }}>
           <Button
