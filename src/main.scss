@@ -360,19 +360,33 @@ strong {
 }
 
 .cart-list {
+  list-style-type: none;
   padding-left: 0;
 }
 
 .cart-item {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-
   &:not(:first-child) {
     margin-block-start: var(--space-200);
     border-block-start: 1px solid var(--rose-100);
     padding-block-start: var(--space-200);
   }
+}
+
+.cart-item-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-100);
+}
+
+.cart-item-column {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.cart-item-pricing {
+  display: flex;
+  gap: var(--space-100);
 }
 
 .cart-divider {
