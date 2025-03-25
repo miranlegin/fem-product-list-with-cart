@@ -228,9 +228,22 @@ dialog {
 }
 
 .page-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  // display: grid;
+  // grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   gap: var(--space-400);
+
+  & > :first-child {
+    flex-basis: 608px;
+    flex-grow: 9999;
+  }
+
+  & > :last-child {
+    flex-basis: 384px;
+    flex-grow: 1;
+  }
 }
 
 .button {
