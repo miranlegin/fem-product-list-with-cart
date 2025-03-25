@@ -226,6 +226,8 @@ Single-colored icons can be modified like so:
     background-color: var(--white);
     color: var(--rose-900);
 
+    transition: 175ms ease;
+
     &:hover {
       border-color: var(--red);
       color: var(--red);
@@ -259,6 +261,7 @@ button {
 
   &[data-type='quantity'] {
     position: relative;
+    transition: color 175ms ease;
 
     &::before {
       content: '';
@@ -267,6 +270,7 @@ button {
       margin: 10px;
       border: 1.5px solid var(--white);
       border-radius: 50%;
+      transition: background-color 175ms ease;
     }
 
     &:active {
@@ -289,6 +293,7 @@ button {
 
   &[data-type='remove'] {
     color: var(--rose-400);
+    transition: color 175ms ease;
 
     &:hover {
       color: var(--rose-900);
@@ -405,6 +410,7 @@ strong {
     inset: 0;
     border: 2px solid transparent;
     border-radius: inherit;
+    transition: border-color 175ms ease;
   }
 
   img {
