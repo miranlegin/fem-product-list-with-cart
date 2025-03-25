@@ -9,20 +9,30 @@ const ConfirmationItem = ({ item, itemQuantity }) => {
   }
 
   return (
-    <li style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-      <img src={item.image.thumbnail} width={48} height={48} alt='' />
-      <div style={{ flexGrow: 1 }}>
-        <h3 className='text-preset-4 fw-semibold text-rose-900'>{item.name}</h3>
-        <p>
-          <span className='text-preset-4 fw-semibold text-red'>
-            {quantity}x
-          </span>
-          <span className='text-preset-4 text-rose-500'>
-            @${item.price.toFixed(2)}
-          </span>
-        </p>
+    <li className='order-item'>
+      <div className='order-item-layout'>
+        <img
+          className='order-image'
+          src={item.image.thumbnail}
+          width={48}
+          height={48}
+          alt=''
+        />
+        <div className='order-item-column'>
+          <h3 className='text-preset-4 fw-semibold text-rose-900'>
+            {item.name}
+          </h3>
+          <p className='order-item-pricing'>
+            <span className='text-preset-4 fw-semibold text-red'>
+              {quantity}x
+            </span>
+            <span className='text-preset-4 text-rose-500'>
+              @${item.price.toFixed(2)}
+            </span>
+          </p>
+        </div>
+        <p className='text-preset-3 text-rose-900'>${calculatedPrice}</p>
       </div>
-      <p className='text-preset-3 text-rose-900'>${calculatedPrice}</p>
     </li>
   );
 };

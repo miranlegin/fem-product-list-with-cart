@@ -117,7 +117,7 @@ function App() {
           <main>
             <h1 className='text-preset-1 text-rose-900'>Desserts</h1>
             {/* <h2>List of desserts</h2> */}
-            <div className='cards-list'>
+            <div className='items-list'>
               {!isLoading ? (
                 data?.map((item) => (
                   <Item
@@ -145,14 +145,14 @@ function App() {
           </aside>
         </div>
       </div>
-      {/* {totalSum > 0 && (
+      {totalSum > 0 && (
         <Confirmation
           totalSum={totalSum}
           productsInCart={productsInCart}
           itemQuantity={cart}
           onDelete={emptyCart}
         ></Confirmation>
-      )} */}
+      )}
     </>
   );
 }
