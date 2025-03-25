@@ -37,7 +37,7 @@ const Cart = ({
             ></CartItem>
           ))}
       </ul>
-      <div>
+      <div className='cart-divider flex-between'>
         <span className='text-preset-4 text-rose-900'>Order Total</span>
         <span className='text-preset-2 text-rose-900'>
           ${totalSum.toFixed(2)}

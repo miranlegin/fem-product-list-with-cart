@@ -333,6 +333,13 @@ button {
   }
 }
 
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-100);
+}
+
 .frame {
   display: grid;
   gap: var(--space-300);
@@ -366,6 +373,11 @@ strong {
     border-block-start: 1px solid var(--rose-100);
     padding-block-start: var(--space-200);
   }
+}
+
+.cart-divider {
+  border-block-start: 1px solid var(--rose-100);
+  padding-block-start: var(--space-300);
 }
 
 .item-image {
