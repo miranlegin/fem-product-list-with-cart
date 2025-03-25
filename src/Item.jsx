@@ -39,7 +39,7 @@ const Item = ({ item, cart, increaseQuantity, decreaseQuantity }) => {
 
       <div className='item-description'>
         <p className='text-preset-4 text-rose-500'>{item.category}</p>
-        <h3 className='text-preset-3 text-rose-900'>{item.name}</h3>
+        <h2 className='text-preset-3 text-rose-900'>{item.name}</h2>
         <p className='text-preset-3 text-red'>${item.price.toFixed(2)}</p>
       </div>
     </article>
