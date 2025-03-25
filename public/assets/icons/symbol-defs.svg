@@ -1,0 +1,14 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-add" viewBox="0 0 32 32">
+<path d="M24 15h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2z"></path>
+</symbol>
+<symbol id="icon-subtract" viewBox="0 0 32 32">
+<path d="M8 15h16v2h-16v-2z"></path>
+</symbol>
+<symbol id="icon-remove" viewBox="0 0 32 32">
+<path d="M16 2c-7.8 0-14 6.2-14 14s6.2 14 14 14c7.8 0 14-6.2 14-14s-6.2-14-14-14zM16 28c-6.6 0-12-5.4-12-12s5.4-12 12-12c6.6 0 12 5.4 12 12s-5.4 12-12 12z"></path>
+<path d="M21.4 23l-5.4-5.4-5.4 5.4-1.6-1.6 5.4-5.4-5.4-5.4 1.6-1.6 5.4 5.4 5.4-5.4 1.6 1.6-5.4 5.4 5.4 5.4-1.6 1.6z"></path>
+</symbol>
+</defs>
+</svg>
