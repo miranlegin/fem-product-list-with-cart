@@ -45,7 +45,8 @@ const Cart = ({
       </div>
       <div className='banner'>
         <img
-          className='icon'
+          width={20}
+          height={20}
           src='/assets/icons/icon-carbon-neutral.svg'
           alt=''
         />
