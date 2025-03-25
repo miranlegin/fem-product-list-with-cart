@@ -28,11 +28,19 @@ const Button = ({ product, id, quantity, onIncrease, onDecrease }) => {
             }}
           >
             <span className='sr-only'>Remove 1 {product} </span>
-            <svg className='icon icon-subtract'>
+            <svg
+              className='icon icon-subtract'
+              width={20}
+              height={20}
+              aria-hidden='true'
+              focusable='false'
+            >
               <use xlinkHref='/assets/icons/symbol-defs.svg#icon-subtract'></use>
             </svg>
           </button>
-          <div className='text-preset-4 fw-semibold text-white'>{quantity}</div>
+          <div className='text-preset-4 fw-semibold text-white'>
+            {quantity} <span className='sr-only'>in cart</span>
+          </div>
           <button
             className='button-square'
             data-type='quantity'
@@ -41,7 +49,13 @@ const Button = ({ product, id, quantity, onIncrease, onDecrease }) => {
             }}
           >
             <span className='sr-only'>Add 1 {product} </span>
-            <svg className='icon icon-add'>
+            <svg
+              className='icon icon-add'
+              width={20}
+              height={20}
+              aria-hidden='true'
+              focusable='false'
+            >
               <use xlinkHref='/assets/icons/symbol-defs.svg#icon-add'></use>
             </svg>
           </button>

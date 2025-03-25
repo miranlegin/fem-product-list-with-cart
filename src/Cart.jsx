@@ -25,7 +25,10 @@ const Cart = ({
 
   return (
     <div className='frame'>
-      <h2 className='text-preset-2 text-red'>Your Cart ({totalQuantity})</h2>
+      <h2 className='text-preset-2 text-red'>
+        Your Cart ({totalQuantity}
+        <span className='sr-only'> items</span>)
+      </h2>
       <ul className='cart-list'>
         {!isLoading &&
           productsInCart.map((item) => (

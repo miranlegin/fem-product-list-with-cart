@@ -16,13 +16,13 @@ const CartItem = ({ item, itemQuantity, onRemove }) => {
           </h3>
           <div className='cart-item-pricing'>
             <span className='text-preset-4 fw-semibold text-red'>
-              {itemQuantity}x
+              {itemQuantity}x <span className='sr-only'>in cart</span>
             </span>
             <span className='text-preset-4 text-rose-500'>
-              @${item.price.toFixed(2)}
+              @${item.price.toFixed(2)} <span className='sr-only'>each</span>
             </span>
             <span className='text-preset-4 fw-semibold text-rose-500'>
-              ${calculatedPrice}
+              ${calculatedPrice} <span className='sr-only'>total</span>
             </span>
           </div>
         </div>
@@ -35,7 +35,13 @@ const CartItem = ({ item, itemQuantity, onRemove }) => {
             }}
           >
             <span className='sr-only'>Remove {item.name} </span>
-            <svg className='icon icon-remove'>
+            <svg
+              className='icon icon-remove'
+              width={20}
+              height={20}
+              aria-hidden='true'
+              focusable='false'
+            >
               <use xlinkHref='/assets/icons/symbol-defs.svg#icon-remove'></use>
             </svg>
           </button>
