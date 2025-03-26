@@ -11,7 +11,12 @@ const Button = ({ product, id, quantity, onIncrease, onDecrease }) => {
             onIncrease(id);
           }}
         >
-          <img src='/assets/icons/icon-add-to-cart.svg' alt='' />
+          <img
+            src='/assets/icons/icon-add-to-cart.svg'
+            width={21}
+            height={20}
+            alt=''
+          />
           <div className='text-preset-4 fw-semibold'>
             Add
             <span className='sr-only'> {product} </span>
