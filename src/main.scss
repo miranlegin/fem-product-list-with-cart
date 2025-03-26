@@ -194,11 +194,6 @@ h6 {
   fill: currentColor;
 }
 
-.wrapper {
-  max-width: 76rem;
-  margin-inline: auto;
-}
-
 // LAYOUT
 body {
   font-family: var(--ff-base);
@@ -227,6 +222,12 @@ dialog {
   background-color: transparent;
 }
 
+.wrapper {
+  // max-width: 76rem;
+  width: min(76rem, 100% - clamp(3rem, 1.0916rem + 8.1425vw, 5rem));
+  margin-inline: auto;
+}
+
 .page-layout {
   // display: grid;
   // grid-template-columns: 2fr 1fr;
@@ -236,7 +237,7 @@ dialog {
   gap: var(--space-400);
 
   & > :first-child {
-    flex-basis: 608px;
+    flex-basis: 484px;
     flex-grow: 9999;
   }
 
@@ -379,8 +380,12 @@ dialog {
 // ITEMS
 
 .items-list {
+  --min-item-size: 13rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--min-item-size), 100%), 1fr)
+  );
   gap: var(--space-400) var(--space-300);
 }
 
@@ -398,6 +403,7 @@ dialog {
     transition: border-color 175ms ease;
   }
 
+  picture,
   img {
     border-radius: inherit;
   }

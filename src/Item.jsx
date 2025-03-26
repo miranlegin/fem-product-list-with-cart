@@ -15,7 +15,7 @@ const Item = ({ item, cart, increaseQuantity, decreaseQuantity }) => {
             />
             <source
               srcSet={`${item.image.tablet} 427w`}
-              media='(min-width: 640px)'
+              media='(min-width: 768px)'
             />
             <img
               src={item.image.mobile}
